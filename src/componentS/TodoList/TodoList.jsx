@@ -53,6 +53,8 @@ const TodoList=(props)=>{
             return res.json()
         }).then((res)=>{
             setlist([...res])
+        }).catch((err)=>{
+            toast.error(err)
         })
     },[create,isSelect])
     
