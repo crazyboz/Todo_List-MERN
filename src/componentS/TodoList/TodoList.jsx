@@ -49,7 +49,7 @@ const TodoList=(props)=>{
     },[create])
 
     useEffect(()=>{
-        fetch(`/data/${isSelect}/allow-cors`,{mode:'cors'}).then((res)=>{
+        fetch(`/data/${isSelect}`).then((res)=>{
             return res.json()
         }).then((res)=>{
             setlist([...res])
