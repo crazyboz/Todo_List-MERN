@@ -1,7 +1,7 @@
 import "./App.css"
 import "./index.css"
 import TodoList from "./componentS/TodoList/TodoList"
-import NewItems from "./componentS/NewItems/NewItems";
+import NewItems from "https://github.com/crazyboz/Todo_List-MERN/blob/d748ebacfd5680a707968dad9d67740c3d04c7ad/src/componentS/NewItems/NewItems.jsx";
 import { useState } from "react";
 
 
