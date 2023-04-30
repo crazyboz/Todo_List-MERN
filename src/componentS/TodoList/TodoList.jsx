@@ -13,7 +13,7 @@ const TodoList=(props)=>{
     useEffect (()=>{
         if(create) {
             if(create._id===undefined){
-                fetch("/data",{
+                fetch("https://todoapi-r2ra.onrender.com/data",{
                     method:"POST",
                     headers: {
                         'Accept': 'application/json',
@@ -28,7 +28,7 @@ const TodoList=(props)=>{
                     toast.error(err)
                 })
             }else{
-                fetch("/data",{
+                fetch("https://todoapi-r2ra.onrender.com/data",{
                     method:"PUT",
                     headers: {
                         'Accept': 'application/json',
@@ -49,7 +49,7 @@ const TodoList=(props)=>{
     },[create])
 
     useEffect(()=>{
-        fetch(`/data/${isSelect}`).then((res)=>{
+        fetch(`https://todoapi-r2ra.onrender.com/data/${isSelect}`).then((res)=>{
             return res.json()
         }).then((res)=>{
             setlist([...res])
@@ -61,7 +61,7 @@ const TodoList=(props)=>{
     const [list,setlist]=useState([])
 
     const deleteItem=(id)=>{
-        fetch("/data",{
+        fetch("https://todoapi-r2ra.onrender.com/data",{
             method:"DELETE",
             headers: {
                 'Accept': 'application/json',
@@ -72,7 +72,7 @@ const TodoList=(props)=>{
             return res.json()
         }).then((res)=>{
             toast.success(res.msg)
-            fetch(`/data/${isSelect}`).then((res)=>{
+            fetch(`https://todoapi-r2ra.onrender.com/data/${isSelect}`).then((res)=>{
                 return res.json()
             }).then((res)=>{
                 setlist([...res])
