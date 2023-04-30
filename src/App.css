@@ -213,7 +213,7 @@ input[type="text"]{
 .sort select{
   margin-left: 5px;
   border-radius: 5px;
-  margin-right: 2px;
+  margin-right: 5px;
   font-size: small !important;
 }
 
